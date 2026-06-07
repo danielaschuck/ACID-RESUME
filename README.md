@@ -1,85 +1,19 @@
-# ACID in Practice
+# Data Engineering Studies
 
-A simple banking system project developed in Python and SQLite to demonstrate the ACID properties in database transactions, including Atomicity, Consistency, Isolation, and Durability.
+## Português
 
----
+Este repositório foi criado como uma central de estudos em Data Engineering. Aqui irei reunir códigos, testes, exercícios, anotações e projetos desenvolvidos durante meu processo de aprendizado.
 
-## Technologies Used
+O objetivo é organizar minha evolução na área, praticar conceitos importantes e armazenar diferentes exemplos relacionados a engenharia de dados, banco de dados, pipelines, ETL, cloud, automação e ferramentas utilizadas no ecossistema de dados.
 
-* Python
-* SQLite
-* Google Colab
+Os conteúdos serão adicionados gradualmente conforme meus estudos avançarem.
 
 ---
 
-## Project Objective
+## English
 
-The objective of this project is to demonstrate how the ACID properties work in relational databases through practical examples using a simple banking system.
+This repository was created as a central hub for my Data Engineering studies. Here I will gather code, tests, exercises, notes, and projects developed throughout my learning journey.
 
----
+The goal is to organize my progress in the field, practice important concepts, and store different examples related to data engineering, databases, pipelines, ETL, cloud, automation, and tools used in the data ecosystem.
 
-# ACID Properties Demonstrated
-
-## Atomicity
-
-A transfer transaction is canceled when an error occurs, ensuring that either the entire operation is completed or nothing is changed.
-
-### Example
-
-* Insufficient balance during a transfer
-* Transaction canceled using `ROLLBACK`
-
----
-
-## Consistency
-
-The database enforces rules to prevent invalid data.
-
-### Example
-
-* Accounts cannot have negative balances
-* Validation implemented using:
-
-```sql
-CHECK (saldo >= 0)
-```
-
----
-
-## Isolation
-
-The project simulates concurrent transactions accessing the same balance, demonstrating how transaction isolation helps prevent conflicts and inconsistent data.
-
-### Example
-
-* Two transactions attempting to use the same balance simultaneously
-* Validation before updating account balances
-
----
-
-## Durability
-
-After executing `COMMIT`, the changes are permanently stored in the database.
-
-### Example
-
-* Updated balances remain saved even after restarting the application
-
----
-
-## Sample Table Structure
-
-```sql
-CREATE TABLE IF NOT EXISTS contas (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    nome TEXT NOT NULL,
-    saldo REAL NOT NULL CHECK (saldo >= 0)
-)
-```
-
----
-
-## Author
-Daniela Schuck
-
-Daniela Vaz
+New content will be added gradually as my studies progress.
